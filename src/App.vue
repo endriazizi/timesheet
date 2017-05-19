@@ -26,8 +26,8 @@ Here we inser a new component into an existed component
 and we call it up here using name tag defined down below like this:
  components:{
     'navbar':Navbar
-    */
   }
+  */
  import Navbar from './componets/Navbar.vue'
 export default {
   components:{
