@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="container" id="app">
   <navbar></navbar>
 <!--   <img src="./assets/logo.png">
     <h1>{{msg}}</h1><h1>{{age}}</h1>
