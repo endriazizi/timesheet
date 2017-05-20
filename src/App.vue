@@ -2,8 +2,8 @@
   <div class="container" id="app">
   <navbar></navbar>
   <router-view></router-view>
-  <login></login>
-  <register></register>
+  <!-- <login></login> -->
+  <!-- <register></register>-->
 <!--   <img src="./assets/logo.png">
     <h1>{{msg}}</h1><h1>{{age}}</h1>
     <h2>Essential Links</h2>
@@ -33,12 +33,12 @@ and we call it up here using name tag defined down below like this:
   */
  import Navbar from './components/Navbar.vue'
  import Login from './components/authentication/Login.vue'
- import Register from './components/authentication/Register.vue'
+ //import Register from './components/authentication/Register.vue'
 export default {
   components:{
     'navbar':Navbar,
     'login': Login,
-    'register': Register
+   // 'register': Register
   }
  
 /*  name: 'app',
