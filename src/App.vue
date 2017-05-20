@@ -1,6 +1,7 @@
 <template>
   <div class="container" id="app">
   <navbar></navbar>
+  <login></login>
 <!--   <img src="./assets/logo.png">
     <h1>{{msg}}</h1><h1>{{age}}</h1>
     <h2>Essential Links</h2>
@@ -29,9 +30,11 @@ and we call it up here using name tag defined down below like this:
   }
   */
  import Navbar from './componets/Navbar.vue'
+ import Login from './componets/authentication/Login.vue'
 export default {
   components:{
-    'navbar':Navbar
+    'navbar':Navbar,
+    'login': Login
   }
  
 /*  name: 'app',
