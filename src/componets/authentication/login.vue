@@ -24,11 +24,22 @@
                 </div>
             </div>
         </div>
+        <!-- to preoutput data using v-model up here 
+        <pre>
+        {{$data}}
+        </pre> -->
     </div>
 </template>
 
 <script>
-    
+    export default {
+        data() {
+            return {
+                email: '',
+                password: ''
+            }
+        }
+    }
 </script>
 
 <style>
