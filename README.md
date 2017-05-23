@@ -17,4 +17,18 @@ npm run build
 
 php artisan key:generate
 
+php artisan migrate
+
+php artisan db:seed
+
+composer require laravel/passport
+
+Laravel\Passport\PassportServiceProvider::class,
+
+we added service provider so we need to migrate db
+
+php artisan migrate
+
+
+
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
