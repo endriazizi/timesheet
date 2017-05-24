@@ -50,9 +50,12 @@
                     password: this.password,
 
                 }
+
+                //our view resource
                 this.$http.post("http://127.0.0.1:8000/oauth/token", data)
                     .then(response=>{
-                        console.log(response)
+                        //console.log(response)
+                        this.$auth.setToken(response.body.access_token, response.body.expires_in + Date.now())
                     })
                    /* 
                    the same uphere the following is the old way

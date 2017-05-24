@@ -5,7 +5,11 @@ import Router from'./routes.js'
 
 import VueResource from 'vue-resource'
 
+import Auth from './packages/auth/Auth.js'
+
 Vue.use(VueResource)
+//notify Vue that we ant to use the following packeges
+Vue.use(Auth)
 
 new Vue({
   //id element goes to show up into index page between div tags,
