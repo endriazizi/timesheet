@@ -45,7 +45,7 @@ export default function (Vue) {
 
 
 
-        //isAuthenticated the easiest funtion to do an insied call the get token funciton taht 
+        //isAuthenticated the easiest funtion to do an inside call the get token funciton taht 
         //will return the function
 
         isAuthenticated () {
