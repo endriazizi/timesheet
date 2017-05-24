@@ -42,12 +42,14 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+           
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
 
     /*
+     //before was 'driver' => 'token', insted 'driver' => 'passport',
     |--------------------------------------------------------------------------
     | User Providers
     |--------------------------------------------------------------------------

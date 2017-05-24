@@ -18,7 +18,7 @@
                         type="password" 
                         placeholder="Password">
                     </div>
-                    <button @click="test"
+                    <button @click="login"
                     class="btn btn-success pull-right">
                     Login</button>
                 </div>
@@ -35,16 +35,31 @@
     export default {
         data() {
             return {
+                //two way bingin data, email and password
                 email: '',
                 password: ''
             }
         },
         methods:{
-            test(){
-                this.$http.get("http://127.0.0.1:8000/api/test")
-                    .then(function (response){
+            login () {
+                var data = {
+                    client_id: 2,
+                    client_secret: '6odT0PRd7RLkR9WZpJ1aNZemwsvTZtMv3qDNNwn7',
+                    grant_type: 'password',
+                    username: this.email,
+                    password: this.password,
+
+                }
+                this.$http.post("http://127.0.0.1:8000/oauth/token", data)
+                    .then(response=>{
                         console.log(response)
                     })
+                   /* 
+                   the same uphere the following is the old way
+                   .then(function (response){
+                        console.log(response)
+                    })
+                    */
             }
         }
     }

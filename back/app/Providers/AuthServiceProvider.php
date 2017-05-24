@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Providers;
+//added by me 
+use Laravel\Passport\Passport;
+
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -25,6 +28,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        //I am calling the route, added by me
+        Passport::routes();
     }
 }
