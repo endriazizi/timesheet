@@ -84,6 +84,20 @@ sTokenController@destroy | web,auth     |
 C:\PHP\htdocs\travelbook\back>
 
 
+
+Cretae a model for product:
+php artisan make:model Product -m
+
+-m will add the migration
+
+now we need the product controller
+php artisan make:controller ProductController
+
+now
+
+php artisan migrate
+
+now we need some dummy data
 ```
 
 
