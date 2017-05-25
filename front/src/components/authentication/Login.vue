@@ -55,7 +55,10 @@
                 this.$http.post("http://127.0.0.1:8000/oauth/token", data)
                     .then(response=>{
                         //console.log(response)
+                        //we set the token
                         this.$auth.setToken(response.body.access_token, response.body.expires_in + Date.now())
+                        //we redirect automaticallyuser to feed page
+                        this.$router.push("/feed")
                     })
                    /* 
                    the same uphere the following is the old way
