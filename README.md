@@ -98,6 +98,17 @@ now
 php artisan migrate
 
 now we need some dummy data
+
+set factory faker data 
+migration
+and seed
+
+
+now run:
+
+#product seeder
+php artisan db:seed
+
 ```
 
 

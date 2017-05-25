@@ -12,6 +12,8 @@ Vue.use(VueResource)
 Vue.use(Auth)
 
 
+Vue.http.options.root = 'http://127.0.0.1:8000'
+
 //NAVIGATION GUARD
 //whenever a navigation is trigger, we try to go to another page, navigation guard
 Router.beforeEach(

@@ -51,8 +51,15 @@
 
                 }
 
+ //use HTTP option insted calling localhost each time
+                //take a look insede main js before navigation guard
+                //into main.js i put: Vue.http.options.root = 'http://127.0.0.1:8000'
+
                 //our view resource
-                this.$http.post("http://127.0.0.1:8000/oauth/token", data)
+                //insted use this URIform beacuse we setted into main.js Vue.http.options.root = 'http://127.0.0.1:8000'
+                //this.$http.post("oauth/token", data)
+                //this.$http.post("http://127.0.0.1:8000/oauth/token", data)
+                this.$http.post("oauth/token", data)
                     .then(response=>{
                         //console.log(response)
                         //we set the token

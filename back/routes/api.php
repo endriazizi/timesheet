@@ -14,3 +14,5 @@ Route::get('/test', function() {
         ]
     ]);
 });
+
+Route::resource('products', 'ProductController');
