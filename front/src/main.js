@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import Router from'./routes.js'
+import Router from './routes.js'
 
 import VueResource from 'vue-resource'
 
@@ -11,23 +11,36 @@ Vue.use(VueResource)
 //notify Vue that we ant to use the following packeges
 Vue.use(Auth)
 
+
+//NAVIGATION GUARD
 //whenever a navigation is trigger, we try to go to another page, navigation guard
 Router.beforeEach(
   //'to' where we want to go, 'from' current route, 'next' is the funciton
   (to, from, next) => {
     //here the user is not required to be authenticated
-      if(to.matched.some(record => record.meta.forVisitors)){
-        if(Vue.auth.isAuthenticated ()) {
-          //we can not to this because main.js in not a componet
-          //**************this.$auth.isAuthenticated*************
-          //we direct user to page feed
-          next({
-            path: '/feed'
-          })
-        }
-        //the user can access the page requested
-        else next()
+    if (to.matched.some(record => record.meta.forVisitors)) {
+      if (Vue.auth.isAuthenticated()) {
+        //we can not to this because main.js in not a componet
+        //**************this.$auth.isAuthenticated*************
+        //we direct user to page feed
+        next({
+          path: '/feed'
+        })
+      }
+      //the user can access the page requested
+      else next()
+    }
+
+    else if (to.matched.some(record => record.meta.forAuth)) {
+      if ( ! Vue.auth.isAuthenticated()) {
+
+        next({
+          path: '/login'
+        })
       } else next()
+    }
+
+    else next()
   }
 )
 

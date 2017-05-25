@@ -30,7 +30,10 @@ const router = new VueRouter ({
 
          {
             path: "/feed",
-            component: Feed
+            component: Feed,
+            meta: {
+                forAuth: true
+            }
         }
     ]
 })
